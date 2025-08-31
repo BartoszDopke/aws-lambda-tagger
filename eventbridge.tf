@@ -14,5 +14,5 @@ EOF
 
 resource "aws_cloudwatch_event_target" "lambda_target" {
     rule      = aws_cloudwatch_event_rule.config_resource_created.name
-    arn       = aws_lambda_function.your_lambda_function.arn
+    arn       = aws_lambda_function.lambda_tagger.arn
 }

@@ -1,0 +1,2 @@
+[] store supported resources in DynamoDB table
+[] update DynamoDB table every week to fetch new resources if any appear

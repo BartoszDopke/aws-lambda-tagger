@@ -7,7 +7,7 @@ variable "aws_region" {
 variable "function_name" {
   description = "Name of the Lambda function"
   type        = string
-  default = "lambda-tagger"
+  default     = "lambda-tagger"
 }
 
 variable "retention_in_days" {

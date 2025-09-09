@@ -15,9 +15,9 @@ data "aws_iam_policy_document" "assume_role" {
 data "aws_iam_policy_document" "tagging_policy" {
   statement {
     actions = [
-        "tag:TagResources",
-        "tag:CreateTag",
-        "tag:UntagResources"
+      "tag:TagResources",
+      "tag:CreateTag",
+      "tag:UntagResources"
     ]
     resources = ["*"]
   }

@@ -17,17 +17,17 @@ resource "aws_lambda_function" "lambda_tagger" {
 
   environment {
     variables = {
-      LOG_LEVEL      = "info"
+      LOG_LEVEL = "info"
     }
   }
 }
 
 resource "aws_lambda_permission" "allow_eventbridge" {
-    statement_id  = "AllowExecutionFromEventBridge"
-    action        = "lambda:InvokeFunction"
-    function_name = aws_lambda_function.lambda_tagger.function_name
-    principal     = "events.amazonaws.com"
-    source_arn    = aws_cloudwatch_event_rule.config_resource_created.arn
+  statement_id  = "AllowExecutionFromEventBridge"
+  action        = "lambda:InvokeFunction"
+  function_name = aws_lambda_function.lambda_tagger.function_name
+  principal     = "events.amazonaws.com"
+  source_arn    = aws_cloudwatch_event_rule.config_resource_created.arn
 }
 
 resource "aws_cloudwatch_log_group" "lambda_tagger" {
